@@ -203,7 +203,7 @@ mr:
       tmdb: 280511
       media: tv
       episode: $1   
-  - pattern: "(?i)Dexter.Resurrection.*S(\\\\d+)*E(\\\\d+)"
+  - pattern: "(?i)Dexter.Resurrection.*S(\\d+)*E(\\d+)"
     bind:
       tmdb: 259909
       media: tv
