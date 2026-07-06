@@ -201,12 +201,7 @@ mr:
       tmdb: 280511
       media: tv
       episode: $1   
-  # --- 嗜血法医：杀魔复生 ---         
-  - pattern: "(?i)Dexter.Resurrection.*S(\\d+)*E(\\d+)"
-    bind:
-      tmdb: 259909
-      media: tv
-      episode: $1    
+
  
   
       
