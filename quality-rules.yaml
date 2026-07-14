@@ -956,7 +956,7 @@ quality:
       resolution:
         enabled: true
         weight: 15
-        priority: [2160p, 1080p, 108i, 720p, 480p]
+        priority: [2160p, 1080p, 1080i, 720p, 480p]
       source:
         enabled: true
         weight: 5
@@ -1010,7 +1010,7 @@ quality:
       resolution:
         enabled: true
         weight: 15
-        priority: [2160p, 1080p, 108i, 720p, 480p]
+        priority: [2160p, 1080p, 1080i, 720p, 480p]
       source:
         enabled: true
         weight: 5
@@ -1074,7 +1074,7 @@ quality:
       resolution:
         enabled: true
         weight: 15
-        priority: [2160p, 1080p, 108i, 720p, 480p]
+        priority: [2160p, 1080p, 1080i, 720p, 480p]
       source:
         enabled: true
         weight: 5
@@ -1130,7 +1130,7 @@ quality:
       resolution:
         enabled: true
         weight: 30
-        priority: [2160p, 1080p, 108i, 720p, 480p]
+        priority: [2160p, 1080p, 1080i, 720p, 480p]
 
       source:
         enabled: true
