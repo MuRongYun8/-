@@ -1176,7 +1176,7 @@ quality:
         enabled: false
         weight: 0
 
-      bitrate:
+      video_bitrate:
         enabled: true
         weight: 20
 
