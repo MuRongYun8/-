@@ -1190,7 +1190,7 @@ quality:
   # 开启 ffprobe / 关闭字幕与帧率干扰 / 防止低码率 DV 反杀高质量 HDR10+/Remux
   # --------------------------------------------------------------------------
   - name: 殊途-杜比优先-视频码率版
-    id: quality-shutu-dolby
+    id: quality-shutu-dolby-2
     source_extract_metadata: true
     dest_extract_metadata: true
     scoring:
