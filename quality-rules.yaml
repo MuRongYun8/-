@@ -1227,7 +1227,7 @@ quality:
       frame_rate:
         enabled: false
         weight: 0
-        priority: [120fps, 60fps, 30fps, 25fps, 24fps]
+        priority: [120fps, 60fps, 50fps, 30fps, 25fps, 24fps]
 
       subtitle:
         enabled: false
@@ -1295,13 +1295,13 @@ quality:
       frame_rate:
         enabled: false
         weight: 0
-        priority: [120fps, 60fps, 30fps, 25fps, 24fps]
+        priority: [120fps, 60fps, 50fps, 30fps, 25fps, 24fps]
 
       subtitle:
         enabled: true
         weight: 100
         priority:
-          - languages: [zh, yue]
+          - languages: [zh, zh-CN, zh-TW, zh-HK, yue]
             source: any
 
       file_extension:
