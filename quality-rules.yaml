@@ -1255,8 +1255,8 @@ quality:
   # --------------------------------------------------------------------------
   # 中文字幕优先规则：中文字幕优先，画质其次
   # 任意中文内封/外挂字幕先获得统一加成；同为有字幕或无字幕时再比较画质
-  # 字幕最高 1000 分 > 其余画质维度最高合计 910 分
-  # 音频编码不计分，但音轨超过 3 条时直接排除
+  # 字幕最高 1000 分 > 其余画质与音频维度最高合计 960 分
+  # 音频最高 50 分，并准确区分 Atmos；音轨超过 4 条时直接排除
   # --------------------------------------------------------------------------
   - name: 中文字幕优先
     id: chinese-subtitle-first
@@ -1279,8 +1279,24 @@ quality:
       audio_codec:
         enabled: true
         max_tracks: 4
-        weight: 0
-        priority: ["DTS:X", TrueHD Dolby Atmos, DTS-HD MA, Dolby TrueHD, DTS-HD, Dolby Digital Plus Atmos, Dolby Digital Plus, DTS, Dolby Digital, FLAC, AAC, MP3]
+        weight: 5
+        priority:
+          - codecs: [Dolby TrueHD]
+            atmos: true
+          - codecs: ["DTS:X"]
+          - codecs: [Dolby TrueHD]
+            atmos: false
+          - codecs: [DTS-HD MA]
+          - codecs: [Dolby Digital Plus]
+            atmos: true
+          - codecs: [FLAC]
+          - codecs: [DTS-HD]
+          - codecs: [Dolby Digital Plus]
+            atmos: false
+          - codecs: [DTS]
+          - codecs: [Dolby Digital]
+          - codecs: [AAC]
+          - codecs: [MP3]
 
       hdr:
         enabled: true
@@ -1321,4 +1337,5 @@ quality:
       resolutions: [360p]
       codecs: [Xvid, DivX]
       hdr_types: []
+
 
