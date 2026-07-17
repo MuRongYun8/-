@@ -1278,7 +1278,7 @@ quality:
 
       audio_codec:
         enabled: true
-        max_tracks: 3
+        max_tracks: 4
         weight: 0
         priority: ["DTS:X", TrueHD Dolby Atmos, DTS-HD MA, Dolby TrueHD, DTS-HD, Dolby Digital Plus Atmos, Dolby Digital Plus, DTS, Dolby Digital, FLAC, AAC, MP3]
 
