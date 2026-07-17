@@ -1251,3 +1251,74 @@ quality:
       resolutions: [360p]
       codecs: [Xvid, DivX]
       hdr_types: []
+
+  # --------------------------------------------------------------------------
+  # 中文字幕优先规则：中文字幕优先，画质其次
+  # 任意中文内封/外挂字幕先获得统一加成；同为有字幕或无字幕时再比较画质
+  # 字幕最高 1000 分 > 其余画质维度最高合计 910 分
+  # 音频编码不计分，但音轨超过 3 条时直接排除
+  # --------------------------------------------------------------------------
+  - name: 中文字幕优先
+    id: chinese-subtitle-first
+    scoring:
+      resolution:
+        enabled: true
+        weight: 30
+        priority: [2160p, 1080p, 1080i, 720p, 480p]
+
+      source:
+        enabled: true
+        weight: 3
+        priority: [Remux+UHD BluRay, Remux+BluRay, Remux+BD, UHD BluRay, BluRay, WEB-DL, WEBRip, WEB, Unknown, HDTV, DVDRip, DVD, CAM]
+
+      video_codec:
+        enabled: true
+        weight: 8
+        priority: [AV1, H.265, H.264, VP9]
+
+      audio_codec:
+        enabled: true
+        max_tracks: 3
+        weight: 0
+        priority: ["DTS:X", TrueHD Dolby Atmos, DTS-HD MA, Dolby TrueHD, DTS-HD, Dolby Digital Plus Atmos, Dolby Digital Plus, DTS, Dolby Digital, FLAC, AAC, MP3]
+
+      hdr:
+        enabled: true
+        weight: 30
+        priority: [Dolby Vision P7, Dolby Vision P5, Dolby Vision P8, Dolby Vision, HDR10+, HDR10, HLG, HDR, SDR]
+
+      color_depth:
+        enabled: false
+        weight: 0
+        priority: [12-bit, 10-bit, 8-bit]
+
+      frame_rate:
+        enabled: false
+        weight: 0
+        priority: [120fps, 60fps, 30fps, 25fps, 24fps]
+
+      subtitle:
+        enabled: true
+        weight: 100
+        priority:
+          - languages: [zh, yue]
+            source: any
+
+      file_extension:
+        enabled: false
+        weight: 0
+        priority: [mkv, mp4]
+
+      file_size:
+        enabled: false
+        weight: 0
+
+      video_bitrate:
+        enabled: true
+        weight: 20
+
+    exclude:
+      resolutions: [360p]
+      codecs: [Xvid, DivX]
+      hdr_types: []
+
