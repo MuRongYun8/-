@@ -1004,7 +1004,6 @@ quality:
   # --------------------------------------------------------------------------
   - name: 本地strm洗版github
     id: strm-github
-    id: quality-strm
     scoring:
       resolution:
         enabled: true
