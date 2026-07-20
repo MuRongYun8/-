@@ -69,10 +69,10 @@
 # series_directors        无                  TMDB credits.crew Director   导演名包含关键词，辅助可选条件
 # vote_average            无                  TMDB vote_average            评分区间匹配
 # year                    release_year        TMDB release/first_air 年份   年份/年份区间匹配
-# file_extension          无                  guessit 文件容器/后缀         单值精确匹配
-# resolution              无                  ffprobe 或 guessit           单值精确匹配
-# hdr                     dynamic_range       ffprobe 或 guessit           单值精确匹配
-# dynamic_range           hdr                 ffprobe 或 guessit           单值精确匹配
+# file_extension          无                  文件名解析的容器/后缀         单值精确匹配
+# resolution              无                  ffprobe 或文件名解析          单值精确匹配
+# hdr                     dynamic_range       ffprobe 或文件名解析          单值精确匹配
+# dynamic_range           hdr                 ffprobe 或文件名解析          单值精确匹配
 #
 # 不在上表中的字段不会参与分类匹配；例如 source、video_codec、audio_codec、file_size、
 # bitrate、color_depth、frame_rate、subtitle 等是质量规则/命名/洗版相关字段，不是当前分类
@@ -191,7 +191,7 @@
 # 13. file_extension
 #   含义：文件容器/扩展名。
 #   适用：movie / tv。
-#   来源：guessit 识别的 Container，通常为小写，如 mkv、mp4、iso。
+#   来源：文件名解析识别的 Container，通常为小写，如 mkv、mp4、iso。
 #   匹配：与容器/后缀精确匹配，大小写不敏感。
 #   示例：file_extension: "mkv,mp4,iso,m2ts"
 #   支持：普通值、-排除、!排除。
@@ -199,7 +199,7 @@
 # 14. resolution
 #   含义：分辨率。
 #   适用：movie / tv。
-#   来源：优先使用 ffprobe 探针结果；没有探针结果时使用 guessit 文件名识别结果。
+#   来源：优先使用 ffprobe 探针结果；没有探针结果时使用文件名解析结果。
 #   匹配：与分辨率文本精确匹配，大小写不敏感。
 #   示例：resolution: "4320p,2160p,1080p,720p"
 #   支持：普通值、-排除、!排除。
@@ -207,7 +207,7 @@
 # 15. hdr / dynamic_range
 #   含义：HDR / 动态范围。hdr 与 dynamic_range 完全等价。
 #   适用：movie / tv。
-#   来源：优先使用 ffprobe 探针结果；没有探针结果时使用 guessit 文件名识别结果。
+#   来源：优先使用 ffprobe 探针结果；没有探针结果时使用文件名解析结果。
 #   匹配：与动态范围文本精确匹配，大小写不敏感。
 #   示例：hdr: "Dolby Vision,HDR10,HDR10+,HLG,SDR"
 #   支持：普通值、-排除、!排除。

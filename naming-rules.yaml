@@ -24,7 +24,7 @@
 #   {{episode02}}         集号两位补零（如：05）
 #   {{seasonEpisode}}     组合格式（如：S01E05）
 #
-# --- Guessit 解析字段（从文件名提取）---
+# --- 文件名解析字段（从文件名提取）---
 #   {{videoFormat}}       分辨率（如：2160p、1080p、720p）
 #   {{videoCodec}}        视频编码（如：HEVC、AVC、AV1）
 #   {{audioCodec}}        音频编码（如：DTS-HD MA、TrueHD、AAC）
