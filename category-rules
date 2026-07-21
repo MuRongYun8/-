@@ -64,15 +64,15 @@
 # keywords                无                  TMDB 标题/name               标题包含关键词
 # include_keywords        无                  TMDB keywords                TMDB 标签名精确匹配
 # filename_keywords       无                  源文件名                     文件名包含关键词
-# series_keywords         无                  TMDB 标题/name               标题包含关键词，辅助可选条件
+# series_keywords         无                  TMDB 合集名称/TV name        系列名称包含关键词，辅助可选条件
 # series_actors           无                  TMDB credits.cast            演员名包含关键词，辅助可选条件
 # series_directors        无                  TMDB credits.crew Director   导演名包含关键词，辅助可选条件
 # vote_average            无                  TMDB vote_average            评分区间匹配
 # year                    release_year        TMDB release/first_air 年份   年份/年份区间匹配
-# file_extension          无                  文件名解析的容器/后缀         单值精确匹配
-# resolution              无                  ffprobe 或文件名解析          单值精确匹配
-# hdr                     dynamic_range       ffprobe 或文件名解析          单值精确匹配
-# dynamic_range           hdr                 ffprobe 或文件名解析          单值精确匹配
+# file_extension          无                  文件名解析容器/后缀           单值精确匹配
+# resolution              无                  ffprobe 或文件名解析         单值精确匹配
+# hdr                     dynamic_range       ffprobe 或文件名解析         单值精确匹配
+# dynamic_range           hdr                 ffprobe 或文件名解析         单值精确匹配
 #
 # 不在上表中的字段不会参与分类匹配；例如 source、video_codec、audio_codec、file_size、
 # bitrate、color_depth、frame_rate、subtitle 等是质量规则/命名/洗版相关字段，不是当前分类
@@ -142,13 +142,13 @@
 #   支持：普通值、-排除、!排除。
 #
 # 8. series_keywords
-#   含义：系列/片名辅助关键词。
+#   含义：系列名称辅助关键词。
 #   适用：movie / tv。
-#   来源：电影 title；剧集 name。
-#   匹配：标题包含任一关键词即可，大小写不敏感。
+#   来源：电影使用 TMDB belongs_to_collection.name；剧集使用 TMDB name。
+#   匹配：系列名称包含任一关键词即可，大小写不敏感。电影不属于合集时不会命中，也不会回退片名。
 #   特殊：series_* 字段天然是辅助可选条件，即使不写 ? 也不会卡住普通必选条件。
-#   示例：series_keywords: "奥特曼,名侦探柯南,维也纳新年音乐会"
-#   支持：普通值、-排除、!排除；排除标题更推荐写在 keywords 中，语义更直观。
+#   示例：series_keywords: "哈利·波特,复仇者联盟,名侦探柯南"
+#   支持：普通值、-排除、!排除。
 #
 # 9. series_actors
 #   含义：演员辅助关键词。
@@ -191,7 +191,7 @@
 # 13. file_extension
 #   含义：文件容器/扩展名。
 #   适用：movie / tv。
-#   来源：文件名解析识别的 Container，通常为小写，如 mkv、mp4、iso。
+#   来源：文件名解析得到的 Container，通常为小写，如 mkv、mp4、iso。
 #   匹配：与容器/后缀精确匹配，大小写不敏感。
 #   示例：file_extension: "mkv,mp4,iso,m2ts"
 #   支持：普通值、-排除、!排除。
@@ -255,7 +255,7 @@
 movie:
   # ===================================================================================================
   # 优先级1：特摄电影
-  # 标题关键词和 TMDB 标签至少满足一个；series_keywords 仅作辅助命中。
+  # 标题关键词、TMDB 标签和电影合集名称至少满足一个；series_keywords 仅作辅助命中。
   # ===================================================================================================
   电影/特摄电影:
     genre_ids: "!16"
@@ -268,9 +268,9 @@ movie:
   # 收窄过宽标签，避免 sexy 等泛词误伤普通影片。
   # ===================================================================================================
   电影/R级电影:
-    ?keywords: "聊斋艳谭,肉蒲团,蜜桃成熟时,金瓶梅,大内密探之零零性性,聊斋之艳蛇,超淫特攻队,Big波诱惑,玉蒲团,足本玉蒲团,慈禧秘密生活,飞虎出征,现代应召女郎,夜生活女王之霞姐传奇,囡囡"
-    ?include_keywords: "eroticism,softcore,sexual fantasy,erotic movie,unusual sexual practices,erotic thriller,erotic drama,erotic horror,erotic animation,pink film,unsimulated sex"
-
+    ?keywords: "聊斋艳谭,肉蒲团,蜜桃成熟时,金瓶梅,大内密探之零零性性,聊斋之艳蛇,超淫特攻队,Big波诱惑,玉蒲团,足本玉蒲团,慈禧秘密生活,飞虎出征,现代应召女郎,夜生活女王之霞姐传奇,囡囡,赤裸羔羊,黑帮大佬和我的365日,色戒,戏梦巴黎,苦月亮,西西里的美丽传说,你妈妈也一样,巴黎最后的探戈"
+    ?include_keywords: "eroticism,softcore,sexual fantasy,erotic,erotic movie,unusual sexual practices,lesbian sex,gay sex,erotic thriller,erotic drama,erotic horror,erotic animation,blow job,unsimulated sex,sexual torture,pink film,eroticism,erotic,sexuality,sex"
+    ?series_keywords: "美丽小蜜桃,深喉,艾曼纽,聊斋艳谭,蜜桃成熟时,五十度灰,禁忌,美式禁忌,小姐姐,妻子的情人,本能,女性瘾者"
   # ===================================================================================================
   # 优先级3：动画电影
   # ===================================================================================================
@@ -287,7 +287,7 @@ movie:
     ?original_language: "zh,cn,bo,za,-ja,-ko"
     keywords: "演唱会,巡演,巡迴,巡回,演出,音乐会,音樂會,音乐·会,音乐剧,音樂劇,交响乐,交響樂,歌剧,歌劇,歌会,歌會,音乐节,音樂節,现场,現場,Live,Concert,Tour,Performance,Show,Stage,MV精选集,特别节目,湾区升明月"
     series_actors: "周杰伦,林俊杰,王力宏,张韶涵,陈奕迅,张学友,孙燕姿,李宗盛,刘若英,郭富城,谭咏麟,林忆莲"
-    series_keywords: "湾区升明月,中央广播电视总台中秋晚会"
+    ?keywords: "湾区升明月,中央广播电视总台中秋晚会"
 
   # ===================================================================================================
   # 优先级3：演唱会 - 亚洲歌手演唱会
@@ -305,7 +305,7 @@ movie:
     genre_ids: "10402,-16"
     ?original_language: "-zh,-cn,-bo,-za,-ja,-ko,-id,-th,-ms,-tl,-vi"
     keywords: "演唱会,巡演,巡迴,巡回,演出,音乐会,音樂會,音乐剧,音樂劇,交响乐,交響樂,歌剧,歌劇,歌会,音乐节,音樂節,现场,現場,Live,Concert,Tour,Performance,Show,Stage,MV精选集,特别节目,音乐盛宴"
-    series_keywords: "维也纳新年音乐会"
+    ?keywords: "维也纳新年音乐会"
 
   # ===================================================================================================
   # 优先级3：纪录电影
