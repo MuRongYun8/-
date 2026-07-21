@@ -1272,7 +1272,7 @@ quality:
 
       audio_codec:
         enabled: true
-        max_tracks: 4
+        max_tracks: 6
         weight: 5
         priority:
           - codecs: [Dolby TrueHD]
