@@ -14,8 +14,12 @@
 #   优先级位置分：priority 列表中排名越靠前得分越高
 #   例如 priority: [2160p, 1080p, 720p]
 #        2160p → 最高分，1080p → 次高分，720p → 最低分
+#   有 priority 的离散维度可为每项设置 score（0 < score <= 10）
+#        普通维度使用 {value: WEB-DL, score: 7}；轨道条件直接增加 score 字段
+#        设置后该维度的所有条目都必须是带分数的对象，且按列表顺序非递增
+#        维度得分仍为 weight × score；字符串列表继续按位置等距计分
 #
-# file_size / bitrate 维度特殊：无 priority 列表，使用对数公式计算
+# file_size / bitrate / video_bitrate 维度特殊：无 priority 列表，使用对数公式计算
 #   file_size：文件越大得分越高（~50GB 饱和）
 #   bitrate：码率越高得分越高（~100Mbps 饱和）
 #
@@ -1274,8 +1278,7 @@ quality:
           - languages: [zh]
             formats: [SRT, VTT]
             source: any
-          - languages: [zh, yue]
-            source: any
+          - source: any
 
       file_extension:
         enabled: false
@@ -1296,10 +1299,9 @@ quality:
       hdr_types: []
 
   # --------------------------------------------------------------------------
-  # 中文字幕优先规则：中文字幕优先，画质其次
-  # 字幕先按简体 > 繁体/港繁/粤语 > 泛中文排序，各语言组内再按格式排序
-  # 格式顺序为 PGS > ASS/SSA > SRT/VTT；其他中文格式使用末档兜底
-  # 常见中文字幕最低 1000 分 > 其余画质与音频维度最高合计 960 分
+  # 中文字幕优先规则：中文字幕为强偏好，同为中文时主要比较媒体质量
+  # 确认中文按语言与格式获得 964～1000 分；und 按可能是中文获得 960 分
+  # 明确外语字幕使用 100 分兜底，无字幕 0 分；极端媒体质量差距仍可反超
   # 音频最高 50 分，并准确区分 Atmos；音轨超过 6 条时直接排除
   # --------------------------------------------------------------------------
   - name: 中文字幕优先
@@ -1364,34 +1366,49 @@ quality:
         enabled: true
         weight: 100
         priority:
-          - languages: [zh-CN]
+          - score: 10.00
+            languages: [zh-CN]
             formats: [PGS]
             source: any
-          - languages: [zh-CN]
+          - score: 9.96
+            languages: [zh-CN]
             formats: [ASS, SSA]
             source: any
-          - languages: [zh-CN]
+          - score: 9.92
+            languages: [zh-CN]
             formats: [SRT, VTT]
             source: any
-          - languages: [zh-TW, zh-HK, yue]
+          - score: 9.88
+            languages: [zh-TW, zh-HK, yue]
             formats: [PGS]
             source: any
-          - languages: [zh-TW, zh-HK, yue]
+          - score: 9.84
+            languages: [zh-TW, zh-HK, yue]
             formats: [ASS, SSA]
             source: any
-          - languages: [zh-TW, zh-HK, yue]
+          - score: 9.80
+            languages: [zh-TW, zh-HK, yue]
             formats: [SRT, VTT]
             source: any
-          - languages: [zh]
+          - score: 9.76
+            languages: [zh]
             formats: [PGS]
             source: any
-          - languages: [zh]
+          - score: 9.72
+            languages: [zh]
             formats: [ASS, SSA]
             source: any
-          - languages: [zh]
+          - score: 9.68
+            languages: [zh]
             formats: [SRT, VTT]
             source: any
-          - languages: [zh, yue]
+          - score: 9.64
+            languages: [zh, yue]
+            source: any
+          - score: 9.60
+            languages: [und]
+            source: any
+          - score: 1.00
             source: any
 
       file_extension:
