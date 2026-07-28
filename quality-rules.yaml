@@ -1014,42 +1014,36 @@ quality:
         unknown_policy: zero
         weight: 20
         priority: [2160p, 1080p, 1080i, 720p, 480p]
-      source:
-        enabled: true
-        weight: 8
-        priority: [Remux+UHD BluRay, Remux+BluRay, Remux+BD, UHD BluRay, Remux, BluRay, WEB-DL, WEBRip, WEB, HDTV, DVDRip, DVD, CAM]
       video_codec:
         enabled: true
-        unknown_policy: zero   
-        weight: 10
-        priority: [H.265, AV1, H.264, VP9]
-      audio_codec:
-        enabled: true
         unknown_policy: zero
-        weight: 3
-        priority: ["DTS:X", TrueHD Dolby Atmos, DTS-HD MA, Dolby TrueHD, DTS-HD, Dolby Digital Plus Atmos, Dolby Digital Plus, DTS, Dolby Digital, FLAC, AAC, MP3]
+        weight: 5
+        priority: [H.265, AV1, H.264, VP9]
       hdr:
         enabled: true
         unknown_policy: zero
         weight: 40
         priority: [Dolby Vision P7, Dolby Vision P5, Dolby Vision P8, Dolby Vision, HDR10+, HDR10, HLG, HDR, SDR]
-      color_depth:
+      subtitle:
         enabled: true
-        unknown_policy: zero
-        weight: 4
-        priority: [12-bit, 10-bit, 8-bit]
-      frame_rate:
-        enabled: true
-        unknown_policy: zero
         weight: 5
-        priority: [120fps, 60fps, 50fps, 30fps, 25fps, 24fps]
+        priority:
+          - score: 10.00
+            languages: [zh-CN, zh]
+            source: any
+          - score: 8.00
+            languages: [zh-TW, zh-HK, yue]
+            source: any
+          - score: 8.00
+            languages: [und]
+            source: any
       bitrate:
         enabled: true
         unknown_policy: zero
-        weight: 20
+        weight: 30
     exclude:
-      resolutions: []
-      codecs: []
+      resolutions: [360p]
+      codecs: [Xvid, DivX]
       hdr_types: []
   # --------------------------------------------------------------------------
   # 基于寂寞版画质优先的双版本洗版，开启DV,HDR双版本，开启ff,按画质评分选最优
