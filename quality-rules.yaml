@@ -1026,7 +1026,7 @@ quality:
         priority: [Dolby Vision P7, Dolby Vision P5, Dolby Vision P8, Dolby Vision, HDR10+, HDR10, HLG, HDR, SDR]
       subtitle:
         enabled: true
-        weight: 5
+        weight: 10
         priority:
           - score: 10.00
             languages: [zh-CN, zh]
