@@ -428,6 +428,76 @@ mp:
   - tmdb: 57041
     from: { season: 1, ep: [354, 367] }
     to: { season: 11, ep: [1, 14] }
+  # 航海王
+  - tmdb: 37854
+    from: { season: 1, ep: [1, 61] }
+    to: { season: 1, ep: [1, 61] }      # 东海篇
+  - tmdb: 37854
+    from: { season: 1, ep: [62, 77] }
+    to: { season: 2, ep: [62, 77] }     # 伟大航路突入篇
+  - tmdb: 37854
+    from: { season: 1, ep: [78, 91] }
+    to: { season: 3, ep: [78, 91] }     # 冬岛篇(磁鼓王国)
+  - tmdb: 37854
+    from: { season: 1, ep: [92, 130] }
+    to: { season: 4, ep: [92, 130] }    # 阿拉巴斯坦篇
+  - tmdb: 37854
+    from: { season: 1, ep: [131, 143] }
+    to: { season: 5, ep: [131, 143] }   # 七彩之雾篇(动画原创)
+  - tmdb: 37854
+    from: { season: 1, ep: [144, 195] }
+    to: { season: 6, ep: [144, 195] }   # 空岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [196, 228] }
+    to: { season: 7, ep: [196, 228] }   # 海军要塞&福克西海贼团篇
+  - tmdb: 37854
+    from: { season: 1, ep: [229, 263] }
+    to: { season: 8, ep: [229, 263] }   # 水之七岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [264, 336] }
+    to: { season: 9, ep: [264, 336] }   # 司法岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [337, 381] }
+    to: { season: 10, ep: [337, 381] }  # 恐怖三桅帆船篇
+  - tmdb: 37854
+    from: { season: 1, ep: [382, 407] }
+    to: { season: 11, ep: [382, 407] }  # 香波地诸岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [408, 421] }
+    to: { season: 12, ep: [408, 421] }  # 女儿岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [422, 522] }
+    to: { season: 13, ep: [422, 522] }  # 海底大监狱篇 & 顶上战争篇
+  - tmdb: 37854
+    from: { season: 1, ep: [523, 580] }
+    to: { season: 14, ep: [523, 580] }  # 鱼人岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [581, 642] }
+    to: { season: 15, ep: [581, 642] }  # 庞克哈萨德篇
+  - tmdb: 37854
+    from: { season: 1, ep: [643, 692] }
+    to: { season: 16, ep: [643, 692] }  # 德雷斯罗萨篇(1)
+  - tmdb: 37854
+    from: { season: 1, ep: [693, 748] }
+    to: { season: 17, ep: [693, 748] }  # 德雷斯罗萨篇(2)
+  - tmdb: 37854
+    from: { season: 1, ep: [749, 803] }
+    to: { season: 18, ep: [749, 803] }  # 佐乌篇
+  - tmdb: 37854
+    from: { season: 1, ep: [804, 877] }
+    to: { season: 19, ep: [804, 877] }  # 蛋糕岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [878, 891] }
+    to: { season: 20, ep: [878, 891] }  # 世界会议篇
+  - tmdb: 37854
+    from: { season: 1, ep: [892, 1088] }
+    to: { season: 21, ep: [892, 1088] } # 和之国篇
+  - tmdb: 37854
+    from: { season: 1, ep: [1089, 1155] }
+    to: { season: 22, ep: [1089, 1155] } # 蛋头岛篇
+  - tmdb: 37854
+    from: { season: 1, ep: [1156, 1181] }
+    to: { season: 23, ep: [1156, 1181] } # 艾尔巴夫篇
 
 
 # ==================== 制作组 ====================
