@@ -397,6 +397,37 @@ mp:
     from: { season: 7, ep: [157, 196] }
     to_tmdb: 106853
     to: { season: 7, ep: [1, 40] } 
+  # 银魂
+  - tmdb: 57041
+    from: { season: 1, ep: [50, 99] }
+    to: { season: 2, ep: [1, 50] }
+  - tmdb: 57041
+    from: { season: 1, ep: [100, 150] }
+    to: { season: 3, ep: [1, 51] }
+  - tmdb: 57041
+    from: { season: 1, ep: [151, 201] }
+    to: { season: 4, ep: [1, 51] }
+  - tmdb: 57041
+    from: { season: 1, ep: [202, 252] }
+    to: { season: 5, ep: [1, 51] }
+  - tmdb: 57041
+    from: { season: 1, ep: [253, 265] }
+    to: { season: 6, ep: [1, 13] }
+  - tmdb: 57041
+    from: { season: 1, ep: [266, 316] }
+    to: { season: 7, ep: [1, 51] }
+  - tmdb: 57041
+    from: { season: 1, ep: [317, 328] }
+    to: { season: 8, ep: [1, 12] }
+  - tmdb: 57041
+    from: { season: 1, ep: [329, 341] }
+    to: { season: 9, ep: [1, 13] }
+  - tmdb: 57041
+    from: { season: 1, ep: [342, 353] }
+    to: { season: 10, ep: [1, 12] }
+  - tmdb: 57041
+    from: { season: 1, ep: [354, 367] }
+    to: { season: 11, ep: [1, 14] }
 
 
 # ==================== 制作组 ====================
