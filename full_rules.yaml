@@ -498,6 +498,18 @@ mp:
   - tmdb: 37854
     from: { season: 1, ep: [1156, 1181] }
     to: { season: 23, ep: [1156, 1181] } # 艾尔巴夫篇
+  # 一念永恒
+  - tmdb: 107371 
+    from: { season: 1, ep: [1, 52] } 
+    to:   { season: 1, ep: [1, 52] }
+  
+  - tmdb: 107371
+    from: { season: 2, ep: [1, 54] }  
+    to:   { season: 1, ep: [53, 106] }
+  
+  - tmdb: 107371
+    from: { season: 3, ep: [1, 59] }  
+    to:   { season: 1, ep: [107, 165] }
 
 
 # ==================== 制作组 ====================
