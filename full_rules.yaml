@@ -500,8 +500,8 @@ mp:
     to: { season: 23, ep: [1156, 1181] } # 艾尔巴夫篇
   # 一念永恒
   - tmdb: 107371 
-    from: { season: 1, ep: [1, 52] } 
-    to:   { season: 1, ep: [1, 52] }
+    from: { season: 4, ep: [1, 35] } 
+    to:   { season: 1, ep: [166, 200] }
   
   - tmdb: 107371
     from: { season: 2, ep: [1, 54] }  
