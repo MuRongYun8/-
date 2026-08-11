@@ -520,6 +520,56 @@ mp:
     from: { season: 2, ep: [13, 24] }
     to_tmdb: 83962
     to: { season: 1, ep: [13, 24] }
+  ##法证先锋
+  - tmdb: 4114
+    from: { season: 1, ep: [1, 25] }
+    to_tmdb: 254090
+    to: { season: 1, ep: [1, 25] }
+  - tmdb: 286997
+    from: { season: 1, ep: [1, 25] }
+    to_tmdb: 254090
+    to: { season: 1, ep: [1, 25] }
+  - tmdb: 286997
+    from: { season: 2, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 2, ep: [1, 30] }
+  - tmdb: 286997
+    from: { season: 3, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 3, ep: [1, 30] }
+  - tmdb: 286997
+    from: { season: 4, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 4, ep: [1, 30] }
+  - tmdb: 286997
+    from: { season: 5, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 5, ep: [1, 30] }
+  - tmdb: 286997
+    from: { season: 6, ep: [1, 24] }
+    to_tmdb: 254090
+    to: { season: 6, ep: [1, 24] }
+  - tmdb: 15281
+    from: { season: 1, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 2, ep: [1, 30] }
+  - tmdb: 38180
+    from: { season: 1, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 3, ep: [1, 30] }
+  - tmdb: 93874
+    from: { season: 1, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 4, ep: [1, 30] }
+  - tmdb: 137600
+    from: { season: 1, ep: [1, 30] }
+    to_tmdb: 254090
+    to: { season: 5, ep: [1, 30] }
+  - tmdb: 260725
+    from: { season: 1, ep: [1, 24] }
+    to_tmdb: 254090
+    to: { season: 6, ep: [1, 24] }
+
 
 
 # ==================== 制作组 ====================
