@@ -42,8 +42,6 @@ mr:
     bind: { tmdb: 96571, media: tv }
   - pattern: "ONE：高中英雄们"
     bind: { tmdb: 233219, media: tv }
-  - pattern: "Perfect World"
-    bind: { tmdb: 124003, media: tv }
   - pattern: "成何体统 \\(2024\\)"
     bind: { tmdb: 256783, media: tv }
   - pattern: "成何体统 \\(2026\\)"
