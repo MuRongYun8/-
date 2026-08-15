@@ -1416,7 +1416,7 @@ quality:
 
       video_bitrate:
         enabled: true
-        weight: 20
+        weight: 30
 
     exclude:
       resolutions: [360p]
