@@ -4193,7 +4193,7 @@ tmdb_override:
 tmdb_blacklist:
   #卧底厨神  
   - tmdb_id: 328951
-    media_type: TV
+    media_type: tv
   #一念永恒  
   - tmdb_id: 331477
-    media_type: TV
+    media_type: tv
