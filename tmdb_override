@@ -4191,9 +4191,6 @@ tmdb_override:
 ########################################################
 # 仅排除自动识别候选
 tmdb_blacklist:
-  #卧底厨神  
   - tmdb_id: 328951
-    media_type: tv
-  #一念永恒  
-  - tmdb_id: 331477
-    media_type: tv
+    media_type: tv      # 卧底厨神
+
