@@ -4193,4 +4193,8 @@ tmdb_override:
 tmdb_blacklist:
   - tmdb_id: 328951
     media_type: tv      # 卧底厨神
+  - tmdb_id: 327843
+    media_type: tv      # 拯救替身千金的是冷酷无情冰之王子的爱
+  - tmdb_id: 318729
+    media_type: tv      # 凡人修仙传
 
