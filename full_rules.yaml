@@ -567,6 +567,16 @@ mp:
     from: { season: 1, ep: [1, 24] }
     to_tmdb: 254090
     to: { season: 6, ep: [1, 24] }
+  - tmdb: 223564     # 超超超超超喜欢你的100个女朋友
+    from: { season: 2, ep: [1, 12] }
+    to: { season: 1, ep: [13, 24] }
+  - tmdb: 223564     # 超超超超超喜欢你的100个女朋友
+    from: { season: 3, ep: [1, 12] }
+    to: { season: 1, ep: [15, 36] }
+  - tmdb: 328583    # 超超超超超喜欢你的100个女朋友
+    from: { season: 3, ep: [1, 12] }
+    to_tmdb: 223564
+    to: { season: 1, ep: [25, 36] }
 
 
 
