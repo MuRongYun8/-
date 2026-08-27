@@ -1196,7 +1196,7 @@ quality:
         enabled: true
         unknown_policy: zero
         weight: 3
-        priority: [Remux+UHD BluRay, Remux+BluRay, Remux+BD, UHD BluRay, BluRay, WEB-DL, WEBRip, WEB, Unknown, HDTV, DVDRip, DVD, CAM]
+        priority: [Remux+UHD BluRay, Remux+BluRay, Remux+BD, UHD BluRay, BluRay, BDRip, WEB-DL, WEBRip, WEB, Unknown, HDTV, DVDRip, DVD, CAM]
 
       video_codec:
         enabled: true
@@ -1310,7 +1310,7 @@ quality:
         enabled: true
         unknown_policy: zero
         weight: 3
-        priority: [Remux+UHD BluRay, Remux+BluRay, Remux+BD, UHD BluRay, BluRay, WEB-DL, WEBRip, WEB, Unknown, HDTV, DVDRip, DVD, CAM]
+        priority: [Remux+UHD BluRay, Remux+BluRay, Remux+BD, UHD BluRay, BluRay, BDRip, WEB-DL, WEBRip, WEB, Unknown, HDTV, DVDRip, DVD, CAM]
 
       video_codec:
         enabled: true
