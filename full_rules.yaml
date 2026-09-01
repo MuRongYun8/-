@@ -500,14 +500,6 @@ mp:
   - tmdb: 107371 
     from: { season: 4, ep: [1, 35] } 
     to:   { season: 1, ep: [166, 200] }
-  
-  - tmdb: 107371
-    from: { season: 2, ep: [1, 54] }  
-    to:   { season: 1, ep: [53, 106] }
-  
-  - tmdb: 107371
-    from: { season: 3, ep: [1, 59] }  
-    to:   { season: 1, ep: [107, 165] }
   #斗罗大陆2
   - tmdb: 76572
     from: { season: 2, ep: [1, 182] }
