@@ -358,8 +358,8 @@ mp:
     to:   { season: 1, ep: [9, 16] }
   # 逆天邪神
   - tmdb: 235643
-    from: { season: 2, ep: [1, 20] }
-    to: { season: 1, ep: [31, 50] }
+    from: { season: 2, ep: [1, 52] }
+    to: { season: 1, ep: [31, 82] }
   # 妻子的浪漫旅行
   - tmdb: 97199
     from: { season: 7, ep: [1, 14] }
