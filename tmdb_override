@@ -4197,4 +4197,16 @@ tmdb_blacklist:
     media_type: tv      # 拯救替身千金的是冷酷无情冰之王子的爱
   - tmdb_id: 318729
     media_type: tv      # 凡人修仙传
+  - tmdb_id: 278253
+    media_type: tv      # 锦衣夜行
+  - tmdb_id: 321091
+    media_type: tv      # MATKA KING
+  - tmdb_id: 328583 
+    media_type: tv      # 超超超超超喜欢你的100个女朋友
+  - tmdb_id: 303820
+    media_type: tv      # 遮天
+  - tmdb_id: 292317
+    media_type: tv      # 遮天
+  - tmdb_id: 331477 
+    media_type: tv      # 一念永恒
 
