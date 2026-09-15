@@ -569,6 +569,18 @@ mp:
     from: { season: 3, ep: [1, 12] }
     to_tmdb: 223564
     to: { season: 1, ep: [25, 36] }
+   - tmdb: 65942    # Re：从零开始的异世界生活
+    from: { season: 2, ep: [1, 25] }
+    to_tmdb: 65942
+    to: { season: 1, ep: [26, 50] }
+  - tmdb: 65942    # Re：从零开始的异世界生活
+    from: { season: 3, ep: [1, 16] }
+    to_tmdb: 65942
+    to: { season: 1, ep: [51, 66] }
+  - tmdb: 65942    # Re：从零开始的异世界生活
+    from: { season: 4, ep: [1, 19] }
+    to_tmdb: 65942
+    to: { season: 1, ep: [67, 85] } 
 
 
 
