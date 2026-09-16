@@ -301,12 +301,22 @@ mp:
     from: { season: 1, ep: [65, 66] }
     to:   { season: 0, ep: [1, 2] }
   # 一念永恒
-  - tmdb: 107371
+  - tmdb: 331477
+    from: { season: 1, ep: [1, 52] }
+    to_tmdb: 107371
+    to: { season: 1, ep: [1, 52] }
+  - tmdb: 331477
     from: { season: 2, ep: [1, 54] }
-    to:   { season: 1, ep: [53, 106] }
-  - tmdb: 107371
+    to_tmdb: 107371
+    to: { season: 1, ep: [53, 106] }
+  - tmdb: 331477
     from: { season: 3, ep: [1, 59] }
-    to:   { season: 1, ep: [107, 165] }
+    to_tmdb: 107371
+    to: { season: 1, ep: [107, 165] }
+  - tmdb: 331477
+    from: { season: 4, ep: [1, 30] }
+    to_tmdb: 107371
+    to: { season: 1, ep: [166, 195] }
   # 游戏王-怪兽之决斗
   - tmdb: 902
     from: { season: 2, ep: [1, 48] }
