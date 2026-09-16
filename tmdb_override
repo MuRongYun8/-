@@ -4207,6 +4207,5 @@ tmdb_blacklist:
     media_type: tv      # 遮天
   - tmdb_id: 292317
     media_type: tv      # 遮天
-  - tmdb_id: 331477 
-    media_type: tv      # 一念永恒
+
 
