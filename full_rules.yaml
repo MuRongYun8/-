@@ -587,6 +587,26 @@ mp:
     from: { season: 4, ep: [1, 19] }
     to_tmdb: 65942
     to: { season: 1, ep: [67, 85] } 
+  - tmdb: 71446    # 纸房子奈飞版
+    from: { season: 1, ep: [1, 13] }
+    to_tmdb: 71446
+    to: { season: 0, ep: [1, 13] }
+  - tmdb: 71446
+    from: { season: 2, ep: [1, 9] }
+    to_tmdb: 71446
+    to: { season: 0, ep: [14, 22] }
+  - tmdb: 71446
+    from: { season: 3, ep: [1, 8] }
+    to_tmdb: 71446
+    to: { season: 2, ep: [1, 8] }
+  - tmdb: 71446
+    from: { season: 4, ep: [1, 8] }
+    to_tmdb: 71446
+    to: { season: 2, ep: [9, 16] }
+  - tmdb: 71446
+    from: { season: 5, ep: [1, 10] }
+    to_tmdb: 71446
+    to: { season: 3, ep: [1, 10] }
 
 
 
