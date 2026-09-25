@@ -4186,6 +4186,12 @@ tmdb_override:
     keywords:
       - id: 190370
         name: "erotic movie"
+  - tmdb_id: 1156215
+    media_type: movie
+    title: "詹姆斯·邦德之零零性
+    keywords:
+      - id: 190370
+        name: "erotic movie"
 
 ########################################################
 ########################################################
